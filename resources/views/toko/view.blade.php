@@ -24,14 +24,14 @@
         <div class="col-xl-12 col-lg-12 col-sm-12">
             <div class="card shadow mb-4">
                 
-                <!-- Card Header - Dropdown -->
+                <!-- Card Header -->
                 <div
                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                     <h6 class="m-0 font-weight-bold text-success">Toko</h6>
                     
                     <!-- Tombol Tambah Data -->
-                    <a href="{{ url('/toko/create') }}" class="btn btn-success btn-icon-split btn-sm">
-                        <span class="icon text-white-50">
+                    <a href="{{ url('/toko/create') }}" class="btn btn-success btn-icon-split btn-sm font-weight-bold">
+                        <span class="icon text-white-50 ">
                             <i class="fas fa-plus"></i>
                         </span>
                         <span class="text">Tambah Data</span>
@@ -47,16 +47,16 @@
                     <!-- Awal Dari Tabel -->
                     <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                                    <thead class="thead-dark">
-                                        <tr>
+                                    <thead class="bg-dark text-white">
+                                        <tr class="text-center">
                                             <th>Kode</th>
                                             <th>Nama</th>
                                             <th>Alamat</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
-                                    <tfoot class="thead-dark">
-                                        <tr>
+                                    <tfoot class="bg-dark text-white">
+                                        <tr class="text-center">
                                             <th>Kode</th>
                                             <th>Nama</th>
                                             <th>Alamat</th>
@@ -65,22 +65,21 @@
                                     </tfoot>
                                     <tbody>
                                     @foreach ($toko as $t)
-                                        <tr>
+                                        <tr class="justify-content-center text-center align-middle font-poppins font-weight-bold text-gray-900 ">
                                             <td>{{ $t->kode_toko }}</td>
                                             <td>{{ $t->nama_toko }}</td>
                                             <td>{{ $t->alamat_toko }}</td>
                                             <td>
-                                                    <a href="{{ route('toko.edit', $t->id) }}" class="btn btn-warning font-poppins font-weight-bold">
-                                                        <i class="fas fa-edit"></i>
-                                                        <span class="text">Edit</span>
-                                                    </a>
-
-                                                    <a onclick="deleteConfirm(this); return false;" href="#" data-id="{{ $t->id }}" class="btn btn-danger font-poppins font-weight-bold">
-                                                            <i class="fas fa-trash"></i>
-                                                            <span class="text">Delete</span>
-                                                    </a>
+                                                <a href="{{ route('toko.edit', $t->id) }}" class="btn btn-warning font-poppins font-weight-bold">
+                                                    {{-- <i class="fas fa-edit"></i> --}}
+                                                    <span class="text">Edit</span>
+                                                </a>
+                                                <a onclick="deleteConfirm(this); return false;" href="#" data-id="{{ $t->id }}" class="btn btn-danger font-poppins font-weight-bold">
+                                                    {{-- <i class="fas fa-trash"></i> --}}
+                                                    <span class="text">Delete</span>
+                                                </a>
                                             </td>
-                                        </tr>
+                                        </>
                                     @endforeach
                                     </tbody>
                                 </table>
@@ -126,6 +125,7 @@
         
         }
     </script>
+
     <!-- Logout Delete Confirmation-->
     <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -145,6 +145,7 @@
             </div>
         </div>
     </div>   
-<!-- Akhir Modal Delete -->
+    <!-- Akhir Modal Delete -->
+
 
 @endsection
