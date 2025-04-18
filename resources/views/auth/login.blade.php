@@ -1,8 +1,10 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
-            {{-- <img src="{{ asset('img/Foto.jpg') }}" class="w-50 h-50" /> --}}
+            <a href="/">
+            {{-- <x-authentication-card-logo /> --}}
+            <img src="{{ asset('img/mukena.png') }}" class="w-50 h-50"/>
+        </a>
         </x-slot>
 
         <x-validation-errors class="mb-4" />
@@ -39,8 +41,7 @@
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
-
-                <a class="inline-flex items-center px-4 py-2  border border-transparent rounded-md font-semibold text-xs text-gray-900 uppercase tracking-widest hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ms-4" href="{{ route('register') }}" >
+                <a class="inline-flex items-center px-4 py-2  border border-transparent rounded-md font-semibold text-xs text-gray-900 uppercase tracking-widest hover:bg-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 ms-4" href="{{ route('register') }}" >
                 Register
                 </a>
                 {{-- <x-button class="ml-4">

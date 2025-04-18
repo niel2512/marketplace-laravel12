@@ -1,7 +1,12 @@
 <x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
-            <x-authentication-card-logo />
+            <div class="size-24">
+                <a href="/">
+                    {{-- <x-authentication-card-logo /> --}}
+                    <img src="{{ asset('img/mukena.png') }}" class="w-50 h-50" />
+                </a>
+            </div>
         </x-slot>
 
         <x-validation-errors class="mb-4" />
