@@ -27,10 +27,10 @@
                 <!-- Card Header -->
                 <div
                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                    <h6 class="m-0 font-weight-bold text-success">Toko</h6>
+                    <h6 class="m-0 font-weight-bold text-info">Toko</h6>
                     
                     <!-- Tombol Tambah Data -->
-                    <a href="{{ url('/toko/create') }}" class="btn btn-success btn-icon-split btn-sm font-weight-bold">
+                    <a href="{{ url('/toko/create') }}" class="btn btn-info btn-icon-split btn-sm font-weight-bold">
                         <span class="icon text-white-50 ">
                             <i class="fas fa-plus"></i>
                         </span>
