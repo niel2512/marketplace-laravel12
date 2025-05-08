@@ -84,7 +84,7 @@ class TokoController extends Controller
     
         $toko->update($validated);
     
-        return redirect()->route('toko.index')->with('success','Data Berhasil di Ubah');;
+        return redirect()->route('toko.index')->with('success','Data Berhasil di Ubah');
     }
 
     /**

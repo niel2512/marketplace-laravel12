@@ -39,6 +39,12 @@
                     <span>Toko</span>
                 </a>
             </li>
+            <li class="nav-item {{ Request::is('coa*') ? 'active' : '' }}">
+                <a class="nav-link" href="{{ url('coa') }}">
+                    <i class="fas fa-fw fa-university"></i>
+                    <span>COA</span>
+                </a>
+            </li>
             <li class="nav-item {{ Request::is('buttons*') || Request::is('cards*') ? 'active' : '' }}">
                 <a class="nav-link {{ Request::is('buttons*') || Request::is('cards*') ? '' : 'collapsed' }}" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
