@@ -20,20 +20,7 @@ class CoaController extends Controller
      */
     public function index()
     {
-        // mengambil data coa dari database
-    	$coa = Coa::all();
-        //var_dump($coa);
-        //dd;
-    	// mengirim data pegawai ke view pegawai
-        
-    	return view('coa/view', 
-                        [
-                            'coa' => $coa,
-                            'title'=>'Contoh M2',
-                            'nama' => 'Niel'
-                        ]
-                    );
-        
+
     }
 
     // untuk mendapatkan data coa
@@ -137,7 +124,7 @@ class CoaController extends Controller
      */
     public function edit(Coa $coa)
     {
-        $coa = Coa::find($id);
+        $coa = Coa::find($coa->id);
         if($coa)
         {
             return response()->json([
